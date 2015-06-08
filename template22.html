@@ -3,10 +3,10 @@
 	<HEAD>
 
 		<!--****************************************************************-->
-		<!--*   Filename: template21.html                                  *-->
+		<!--*   Filename: template22.html                                  *-->
 		<!--*   Author: Roberty Bierly                                     *-->
 		<!--*   Computer Number: 17                                        *-->
-		<!--*   Date: 5/29/15                                              *-->
+		<!--*   Date: 6/8/15                                               *-->
 		<!--*   Purpose: practice web page design                          *-->
 		<!--*                                                              *-->
 		<!--*                                                              *-->
@@ -35,7 +35,7 @@
 						<!--***************Title*************-->
 						<Center>
 							<H1>MY TEST DRIVE WEB PAGE</H1>
-							by: Robert Bierly - Example problem 21<p></p>
+							by: Robert Bierly - Example problem 22<p></p>
 						</Center>
 						<!--***************End Title*************-->
 
@@ -181,6 +181,51 @@
 								</TR>
 							</TABLE>
 						</p>
+						<br><hr><br>
+
+						<!--***************Advanced Tables*************-->
+
+						<p>
+							<table border="1">
+								<tr>
+									<td COLSPAN="3" width="600">Cell 1</td>
+								</tr>
+								<tr>
+									<td>Cell 2</td>
+									<td>Cell 3</td>
+									<td>Cell 4</td>
+								</tr>
+							</table>
+						</p>
+
+						<p>
+							<table border="1" width="300">
+								<tr>
+									<td COLSPAN="2">Cell 1</td>
+									<td>Cell 2</td>
+								</tr>
+								<tr>
+									<td>Cell 3</td>
+									<td>Cell 4</td>
+									<td>Cell 5</td>
+								</tr>
+							</table>
+						</p>
+
+						<p>
+							<table border="1" >
+								<tr>
+									<td ROWSPAN="3" height="300" width="300">Cell 1</td>
+									<td width="300">Cell 2</td>
+								</tr>
+								<tr>
+									<td>Cell 3</td>
+								</tr>
+								<tr>
+									<td>Cell 4</td>
+								</tr>
+							</table>
+						</p>
 
 						<!--***************End Body of Page*************-->
 
@@ -189,10 +234,38 @@
 			</Table>
 
 			<!--***************Test Drive #1*************-->
-			<A HREF="index.html">Test Drive - Example Problem #21</A> <font color="white"> 5/29/15 </font>
+			<A HREF="index.html">Test Drive - Example Problem #22</A> <font color="white"> 6/8/15 </font>
 			<!--***************End Test Drive #1*************--><p></p>
 		</Center>
 		<!--***********End The Main Page Table**********-->
+
+		<p>
+		<CENTER>
+			<TABLE BORDER=1 CELLPADDING=0 CELLSPACING=0 WIDTH=80% bgcolor="ffffff">
+
+				<! **************** Row One "Banner" *************************>
+
+				<TR>
+					<TD COLSPAN=4 ALIGN=CENTER HEIGHT=100>Page Banner</TD>
+				</TR>
+
+				<! ******* Row Two "Links, Feature Article, Other Adds and Links"*****>
+
+				<TR>
+					<TD Valign="Top" ROWSPAN=2 WIDTH=20%>Links or Open space leave blank</TD>
+					<TD Valign="Top" COLSPAN=2 HEIGHT=200>Feature Article</TD>
+					<TD Valign="Top" ROWSPAN=2>Other Adds and Link</TD>
+				</TR>
+
+				<! ******* Row Two "News Columns"**************************>
+
+				<TR>
+					<TD Valign="Top" WIDTH=30% HEIGHT=150>News Column 1</TD>
+					<TD Valign="Top" WIDTH=30% HEIGHT=150>News Column 2</TD>
+				</TR>
+			</TABLE>
+		</CENTER>
+		</p>
 
 	</BODY>
 </HTML>	

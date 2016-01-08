@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body bgcolor="gold" text="black" link="red">
+
+		<div id="menu" align="center">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="checklist.html">Ubuntu Security</a></li>
+				<li><a href="meme.html">For The Kids</a></li>
+			</ul>
+		</div>
+
+<p># Read ReadMe
+
+</p><p># Answer forensics question
+	</p><p># Fix highlighted problems
+
+</p><p># Lockscreen
+
+</p><p># Enable firewall
+	<br>ufw enable
+
+</p><p># Check software for hacking tools
+	<br># These places typically have malicious files
+	<br>/tmp/
+	<br>/var/tmp/
+	<br>/home/
+	<br>/usr/home
+	<br>/root/
+	<br>/etc/init.d/
+
+</p><p># Lock root
+	<br>sudo passwd -l root	#The flag is an L
+
+</p><p># Check unauthorized users
+	<br>! Use the GUI for now
+	<br># Users that should not exists
+	<br>userdel [USERNAME]
+	<br># Users that should not be admins
+	<br>? groups
+
+</p><p># Set secure passwords
+	<br>! Use the GUI for now
+	<br># Give every user (Not auto-login) a secure password BHSC!b3rP@tr10T123
+	<br>? Set password policy
+	<br># Check visudo
+	<br>sudo visudo
+
+</p><p># Disable guest account
+	<br>+ allow-guest=false	/etc/lightdm/lightdm.conf
+	<br>sudo restart lightdm
+
+</p><p># Configure SSH (if critical)
+	<br>RootLogin	no
+	<br>Protocol	2
+	<br>UsePAM	yes
+	<br>x11Forwarding no
+	<br>EmptyPasswd no
+
+</p><p># Check cronjobs
+	<br>sudo crontab -l
+	<br>sudo crontab -e
+
+</p><p># Find open ports
+	<br>sudo lsof | grep LISTEN
+	<br>sudo netstat -ta(n)
+	<br>sudo nmap -sT -p1-65535 localhost
+	<br>sudo ps -aux | grep [NAME]
+	<br>sudo kill -9 [PID]
+	<br>sudo apt-get purge [NAME]
+
+</p><p># Remove non-critical services
+	<br># apache2, nc, netcat, postfix, irc, ftp, sql, mpd
+	<br># anything prefixed with "r"
+	<br># telnet, sendmail, samba, rpc, lpd, nfs, bind
+	<br>sudo service --status-all
+	<br>sudo service [NAME] kill
+	<br>sudo apt-get purge [NAME]
+	<br># If [NAME] does not match
+	<br>	sudo dpkg -l | grep [NAME]
+
+</p><p># Updating
+	<br>apt-get update && apt-get upgrade
+	<br>? Linux Kernel
+	<br>! Use the GUI for now
+	<br># Automatically check for updates
+
+</p><p># Remove media files
+	<br>find -type f -name 
+	<br>	"*.mp3"
+	<br>	"*.jpg"
+	<br>	"*.png"
+
+</p><p># Check for rootkits
+	<br>? Has this ever helped
+	<br>sudo apt-get install chkrootkit rkhunter
+	<br>sudo chkrootkit
+	<br>sudo rkhunter -c -sk
+		</p>
+
+	</body>
+</html>
